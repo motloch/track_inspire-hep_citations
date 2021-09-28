@@ -2,9 +2,9 @@
 
 ## `citations.py`
 
-Given an author identified by his/her BAI, this Python3 script counts the number of citations and the number of citations excluding self cites in the [Inspirehep](http://inspirehep.net/) database for each author's paper.
+Given an author identified by his/her BAI, this Python3 script counts the total number of citations and the total number of citations excluding self cites over all papers of this author in the [Inspirehep](http://inspirehep.net/) database.
 
-Additionally, it allows saving a snapshot for later detection of new/removed papers and change in the number of citations of individual papers
+Additionally, it allows saving a snapshot for later detection of changes in the number of citations of individual papers and detection of new/removed papers
 
 Built on & inspired by [https://github.com/efranzin/python](https://github.com/efranzin/python)
 
