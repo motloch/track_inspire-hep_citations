@@ -27,3 +27,4 @@ Not saved.
 * `MAX_NUM_PAPERS`, specifies the maximal number of papers requested from INSPIRE-HEP (default `1000`)
 * `SHORT_TITLE_LENGTH`, specifies the length to which shorten long paper titles (default `50`)
 * `NEED_WRITE_CONFIRM`, specifies whether the program asks the user before writing to disk (default `True`)
+* `FILENAME`, specifies the snapshot file

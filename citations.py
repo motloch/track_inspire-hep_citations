@@ -15,6 +15,7 @@ AUTHOR             = 'P.Motloch.2'
 MAX_NUM_PAPERS     = 1000       #Number of papers requested from INSPIRE-HEP
 SHORT_TITLE_LENGTH = 50         #Shorten long paper titles
 NEED_WRITE_CONFIRM = True       #Whether to ask user for permission to save to disk
+FILENAME           = 'old_biblio.npy'
 
 # Import the modules to open and reading URLs and the JSON encoder
 import urllib.request, json
@@ -69,18 +70,18 @@ def save_snapshot():
             print('Not saved.')
             return
 
-    np.save('old_biblio.npy', biblio)
+    np.save(FILENAME, biblio)
     print('Saved.')
     return
 
 #If snapshot does not exist, create it (potentially confirming with the user) and exit
 from os.path import exists
-if not exists('old_biblio.npy'):
+if not exists(FILENAME):
     save_snapshot()
     exit()
 
 #Load snapshot
-old_biblio = np.load('old_biblio.npy')
+old_biblio = np.load(FILENAME)
 
 #Get a set of paper IDs that were added/removed/stayed
 new_paper_ids = set(    biblio['id'])
