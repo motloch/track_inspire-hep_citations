@@ -119,7 +119,7 @@ for i in added_paper_ids:
     else:
         print('Added paper: "' + title + '" with ' +  str(num_cites) + ' citations')
 
-#For papers no added or removed, check if number of citations has changed
+#For papers not added or removed, check if number of citations has changed
 for i in stayed_paper_ids:
 
     idx_old       = np.argmax(old_biblio['id'] == i)
